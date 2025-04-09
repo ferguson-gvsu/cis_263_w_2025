@@ -5,6 +5,8 @@ def helper(options, included, target):
   if sum(included) == target:
     print('Found solution:', included)
     return 1
+  if sum(included) > target: 
+    return 0
   # Stop if we run out of options
   if len(options) == 0: 
     return 0
@@ -22,7 +24,7 @@ def helper(options, included, target):
   return res
 
 
-options = [5, 10, 12, 13, 15, 18]
+options = [5, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
 target = 30
 num_solutions = helper(options, set(), target)
 print('Total number of solutions:', num_solutions)
